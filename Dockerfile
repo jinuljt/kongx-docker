@@ -16,8 +16,8 @@ RUN \
 
 RUN curl https://gitee.com/raoxy/kongx/attach_files/581737/download/kongx-serve-2.2.0.zip  -L -o kongx-serve-${VERSION}.zip
 
-RUN unzip /kongx-serve/kongx-serve-${VERSION}.zip -d /kongx-serve \
-    && rm -rf /kongx-serve/kongx-serve-${VERSION}.zip \
+RUN unzip /kongx-serve-${VERSION}.zip -d /kongx-serve \
+    && rm -rf /kongx-serve-${VERSION}.zip \
     && chmod +x /kongx-serve/scripts/startup.sh
 
 ADD docker-entrypoint.sh /docker-entrypoint.sh
